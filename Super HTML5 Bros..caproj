@@ -78,63 +78,18 @@
         <object-folder name="Players">
             <object-type name="Player1" sid="314528615961576">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Big" sid="929987566359483" type="boolean" />
-                    <instance-variable name="Firey" sid="799645011379143" type="boolean" />
-                    <instance-variable name="Invincible" sid="874342867873111" type="boolean" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Platform" sid="386487250072659">
-                        <behavior id="Platform" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation-folder name="Small Mario">
                         <animation framecount="1" loop="0" name="Standing" pingpong="0" repeatcount="1" repeatto="0" sid="431697302286211" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.125" y="0" />
-                                    <point x="0.875" y="0" />
-                                    <point x="0.875" y="1" />
-                                    <point x="0.125" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                         <animation framecount="3" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="525113014295062" speed="15">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.125" y="0" />
-                                    <point x="0.875" y="0" />
-                                    <point x="0.875" y="1" />
-                                    <point x="0.125" y="1" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.125" y="0" />
-                                    <point x="0.875" y="0" />
-                                    <point x="0.875" y="1" />
-                                    <point x="0.125" y="1" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.125" y="0" />
-                                    <point x="0.875" y="0" />
-                                    <point x="0.875" y="1" />
-                                    <point x="0.125" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                         <animation framecount="1" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="597866083321033" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.125" y="0" />
-                                    <point x="0.875" y="0" />
-                                    <point x="0.875" y="1" />
-                                    <point x="0.125" y="1" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </animation-folder>
@@ -169,6 +124,32 @@
             </object-type>
             <object-type name="Audio" sid="231915931879279">
                 <plugin id="Audio" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Hitboxes">
+            <object-type name="Player1Hitbox" sid="705228149274666">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="673009089712129" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="764572328659251">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Small" pingpong="0" repeatcount="1" repeatto="0" sid="997615388528329" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.4375">
+                            <image-point name="Sprite" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.125" y="0.0625" />
+                                <point x="0.875" y="0.0625" />
+                                <point x="0.875" y="0.9375" />
+                                <point x="0.125" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
     </object-folder>

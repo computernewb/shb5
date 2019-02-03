@@ -3,31 +3,88 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player 1</name>
     <events>
-        <event-group description="" sid="451148573953017" title="Animations (Player 1)">
+        <event-group description="" sid="807364832609981" title="Animations (Player 1)">
             <sub-events>
-                <event-block sid="825565219297836">
+                <event-block sid="756832359029843">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="956852331193709" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="7" inverted="1" name="Is mirrored" sid="798163366695387" type="Player1" />
+                        <condition id="-1" name="Every tick" sid="163183165322802" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="134983680399029" type="Player1">
+                        <action id="-4" name="Set position to another object" sid="584113871457032" type="Player1">
+                            <param id="0" name="Object">Player1Hitbox</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Basic animations</comment>
+                <event-block sid="147685139549620">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="196875379072249" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="127016044052853" type="Player1" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="235811931776713" type="Player1">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="352699972687778">
+                <event-block sid="307927120197883">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="528452058845420" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="809758851884499" type="Keyboard">
                             <param id="0" name="Key">39</param>
                         </condition>
-                        <condition id="7" name="Is mirrored" sid="442745634342454" type="Player1" />
+                        <condition id="7" name="Is mirrored" sid="136965003374056" type="Player1" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="537092411918125" type="Player1">
+                        <action id="7" name="Set mirrored" sid="629030276344653" type="Player1">
                             <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379810139496507">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="534709064727882" type="System">
+                            <param id="0" name="First value">Player1Hitbox.Platform.VectorX</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="770328951714823" type="Player1">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="528333090792847">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="730215774980295" type="System">
+                            <param id="0" name="First value">Player1Hitbox.Platform.VectorX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="216138672143262" type="Player1">
+                            <param id="0" name="Animation">&quot;Standing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="341812678255221">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="288682087703049" type="System">
+                            <param id="0" name="First value">Player1Hitbox.Platform.VectorY</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="758184867911222" type="Player1">
+                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

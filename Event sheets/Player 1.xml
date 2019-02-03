@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player 1</name>
+    <events>
+        <event-group description="" sid="451148573953017" title="Animations (Player 1)">
+            <sub-events>
+                <event-block sid="825565219297836">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="956852331193709" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="798163366695387" type="Player1" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="134983680399029" type="Player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="352699972687778">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="528452058845420" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="442745634342454" type="Player1" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="537092411918125" type="Player1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

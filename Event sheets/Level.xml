@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level</name>
+    <events>
+        <include>Player 1</include>
+        <event-group description="Fun with cheats!" sid="532204814478131" title="Debug Mode">
+            <sub-events>
+                <event-block sid="824615484327107">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="394569281709919" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="892639054132709" type="DebugModeText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Press or hold down 1 to give yourself some coins!</comment>
+                <event-block sid="321507899830379">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="732294323546292" type="Keyboard">
+                            <param id="0" name="Key">49</param>
+                        </condition>
+                        <condition id="-18" name="Is in preview" sid="590845441278583" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="183961385279558" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="896752324904961" title="Game Functions">
+            <sub-events>
+                <event-block sid="490461372429968">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="796316277309692" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="498754920739251" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="297964959243032" type="Audio">
+                            <param id="0" name="Audio file">smb_1up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;1up&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="254725880467853" type="System">
+                            <param id="0" name="Variable">Coins</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

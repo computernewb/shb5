@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Globals</name>
+    <events>
+        <variable comment="How many coins the player(s) have. " constant="0" name="Coins" sid="971145932809435" static="0" type="number">0</variable>
+        <variable comment="Determines if the player is in an online match or not." constant="0" name="isOnline" sid="490756127426893" static="0" type="number">0</variable>
+        <variable comment="The amount of players in the game." constant="0" name="Players" sid="113798051974147" static="0" type="number">1</variable>
+    </events>
+</c2eventsheet>

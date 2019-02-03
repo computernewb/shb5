@@ -8,6 +8,7 @@ The amazing features!!!
 
 * Mario flips his head when you move left/right.
 * There are two blocks.
+* A 1-up noise plays when you get >100 coins (hold down 1 if you are in Preview Mode)
 * That's about it, actually. (For now...)
 
 # What's planned?
@@ -17,3 +18,6 @@ The amazing features!!!
 * Multiplayer (online and local)
 
 And maybe some other features along the way.
+
+# What do I need?
+* Construct 2 (latest version). No plugins needed but this might change in the future so be warned.
